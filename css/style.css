@@ -1,30 +1,6 @@
-:root {
+@import url(global.css);
+@import url(header.css);
+@import url(hero.css);
 
-/* ========================================CORES======================================== */
 
-    --primary-color: #00FF66;
-    --primary-hover: #00E65C;
-    --background-color: #070C10;
-    --card-color:#0E1317;
-    --border-color:#14191C;
-    
-    --title-color: #FFFFFF;
-    --text-color: #D5D8DC;
 
-/*========================================TAMANHOS======================================== */
-
-    --fs-sm: 0.5rem;
-    --fs-base:1rem;
-    --fs-g:2rem;
-    --fs-xg:5rem;
-
-/*========================================LAYOUT======================================== */
-
-    --container-width: 1200px;
-    --header-height: 80px;
-}
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-}
