@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* ========================================CORES======================================== */
+
+  --primary-color: #00ff66;
+  --primary-hover: #00e65c;
+  --background-header: #000308;
+  --background-color: #060b0f;
+  --card-color: #0e1317;
+  --border-color: #14191c;
+
+  --title-color: #ffffff;
+  --text-color: #d5d8dc;
+
+  /*========================================TAMANHOS======================================== */
+
+  --fs-sm: 0.5rem;
+  --fs-detail: 0.75rem;
+  --fs-base: 1rem;
+  --fs-g: 2rem;
+  --fs-title: 2.5rem;
+  --fs-xg: 5rem;
+
+  /*========================================FONTE======================================== */
+  --ftitle: "Montserrat";
+  --ftexts: "Montserrat";
+
+  /*========================================PESO======================================== */
+  --title-weight: 700;
+  --text-weight: 400;
+  --menu-text-weight: 500;
+  /*========================================LAYOUT======================================== */
+
+  --container-width: 1200px;
+  --header-height: 80px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--ftexts);
+}
+a {
+  display: flex;
+  text-decoration: none;
+  color: var(--title-color);
+  gap: 0.4rem;
+}
+span {
+  color: var(--primary-color);
+}

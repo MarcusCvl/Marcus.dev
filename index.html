@@ -1,46 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="Pt-Br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Portifolio Virtual | Marcus Carvalho</title>
-</head>
-<body>
-    <header>
-        <a class="logo" href="#"><span class="logo-span">&lt;/&gt;</span>Marcus<span class="logo-span">.dev</span> </a>
-        <nav class="navbar">
-            <div class="menu-itens">
-                <a class="nav-link" href="#">Sobre</a>
-                <a class="nav-link" href="#">Projetos</a>
-                <a class="nav-link" href="#">Tecnologias</a>
-                <a class="nav-link" href="#">Contato</a>
-            </div>
-            <a class="download-button" href="#"><img class="btn-img"src="assets/download.png" alt="download icon">Download CV</a>
-        </nav>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="#"></a>
+        <span class="logo-span"> &lt;/&gt; </span> Marcus
+        <span class="logo-span"> .dev </span>
+      </a>
+      <a class="menu.toggle" href="#">
+        <img class="menu-hamburguer" src="assets/menu.png" alt="icone menu" />
+      </a>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#">Sobre</a></li>
+          <li><a class="nav-link" href="#">Projetos</a></li>
+          <li><a class="nav-link" href="#">Tecnologias</a></li>
+          <li><a class="nav-link" href="#">Contato</a></li>
+          <li>
+            <a class="btn-download" href="#"
+              ><img
+                class="btn-img"
+                src="assets/download.png"
+                alt="download icon"
+              />
+              Download CV
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="title">
-                    <p class="before-title"><span class="destaque">OLÁ, EU SOU</span></p>
-                    <h1>Marcus Carvalho</h1>
-                    <p class="after-title">Desenvolvedor <span class="destaque">Front-End</span> em formação</p>
-                    <p class="index-text">Crio interfaces modernas,responsivas e experiencias digitais que conectam pessoas e soluções</p>
-                </div>
-                <div class="buttons">
-                    <div class="hero-cta">
-                    <a class="primary-button" href="#">Ver Projetos</a>
-                    <a class="secondary-button" href="#">GitHub<img class="btn-img" src="assets/github.png" alt="github icon"></a>
-                    <div class="redes">
-                        <a class="btn-img"><img src="assets/instagram.png" alt="instagram"></a>
-                        <a class="btn-img"><img src="assets/linkedin.png" alt="linkedin"></a>
-                        <a class="btn-img"><img src="assets/email.png" alt="email"></a>
-                    </div>
-                </div>
-                </div>
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-title">
+            <p class="before-title">
+              <span class="destaque">OLÁ, EU SOU</span>
+            </p>
+            <h1 class="hero-text-title">Marcus Carvalho</h1>
+            <p class="hero-subtitle">
+              Desenvolvedor <span class="highlight">Front-End</span> em formação
+            </p>
+            <p class="hero-text">
+              Crio interfaces modernas,responsivas e experiencias digitais que
+              conectam pessoas e soluções
+            </p>
+          </div>
+
+          <div class="hero-cta">
+            <a class="primary-button" href="#">Ver Projetos</a>
+            <a class="secondary-button" href="#"
+              >GitHub<img
+                class="btn-img"
+                src="assets/github.png"
+                alt="github icon"
+            /></a>
+          </div>
+
+          <div class="social-links">
+            <p class="social-text">REDES SOCIAIS</p>
+            <div class="social">
+              <a class="btn-social"
+                ><img src="assets/instagram.png" alt="instagram"
+              /></a>
+              <a class="btn-social"
+                ><img src="assets/linkedin.png" alt="linkedin"
+              /></a>
+              <a class="btn-social"
+                ><img src="assets/email.png" alt="email"
+              /></a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
