@@ -5,6 +5,10 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 2rem;
+  height: var(--header-height);
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
 }
 .logo {
   display: flex;
@@ -13,14 +17,21 @@
   gap: 0.2rem;
   margin: 8px;
 }
+input[type="checkbox"]:checked ~ .navbar {
+  display: block;
+}
 .navbar {
   display: none;
   gap: 2rem;
+  background-color: var(--background-header);
+  padding: 1.5rem;
 }
 .nav-list {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 0.75rem;
   text-decoration: none;
+  list-style: none;
 }
 .btn-img {
   width: 1rem;
