@@ -9,6 +9,7 @@
   z-index: 1000;
   position: fixed;
   width: 100%;
+  border-bottom: 1px solid var(--border-color);
 }
 .logo {
   display: flex;
@@ -28,7 +29,7 @@ input[type="checkbox"]:checked ~ .navbar {
   padding: 1.5rem;
   position: absolute;
   top: 100%;
-  left:0;
+  left: 0;
 }
 .nav-list {
   display: flex;
@@ -48,4 +49,28 @@ input[type="checkbox"]:checked ~ .navbar {
   border: 1px solid var(--primary-color);
   border-radius: 1.5rem;
   padding: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    background-color: var(--background-color);
+    align-items: center;
+  }
+  .navigation {
+    margin-top: 0;
+  }
+  .navigation label {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    position: relative;
+    background: none;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: var(--fs-base);
+    align-items: center;
+  }
 }
