@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 2rem;
   height: var(--header-height);
   z-index: 1000;
@@ -22,6 +22,7 @@ input[type="checkbox"]:checked ~ .navbar {
   display: block;
   position: absolute;
 }
+
 .navbar {
   display: none;
   gap: 2rem;
@@ -46,9 +47,21 @@ input[type="checkbox"]:checked ~ .navbar {
   height: 1rem;
 }
 .btn-download {
+  display: flex;
   border: 1px solid var(--primary-color);
   border-radius: 1.5rem;
   padding: 0.75rem;
+  transition: all 0.3s;
+}
+.btn-download:hover {
+  background-color: var(--primary-hover);
+}
+.nav-link {
+  display: block;
+  transition: all 0.3s;
+}
+.nav-link:hover {
+  color: var(--primary-hover);
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -63,6 +76,8 @@ input[type="checkbox"]:checked ~ .navbar {
   }
   .navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     background: none;
   }
@@ -72,5 +87,6 @@ input[type="checkbox"]:checked ~ .navbar {
     justify-content: space-between;
     font-size: var(--fs-base);
     align-items: center;
+    padding: 0;
   }
 }
