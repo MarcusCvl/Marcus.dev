@@ -18,6 +18,9 @@
   gap: 0.2rem;
   margin: 8px;
 }
+.navigation {
+  position: relative;
+}
 input[type="checkbox"]:checked ~ .navbar {
   display: block;
   position: absolute;
@@ -29,8 +32,8 @@ input[type="checkbox"]:checked ~ .navbar {
   background-color: var(--background-color);
   padding: 1.5rem;
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: calc(100% + 0.75rem);
+  right: 0;
 }
 .nav-list {
   display: flex;
@@ -58,6 +61,7 @@ input[type="checkbox"]:checked ~ .navbar {
 }
 .nav-link {
   display: block;
+  margin: 1rem 0;
   transition: all 0.3s;
 }
 .nav-link:hover {
@@ -78,8 +82,10 @@ input[type="checkbox"]:checked ~ .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: static;
     background: none;
+    top: auto;
+    right: auto;
   }
   .nav-list {
     display: flex;
