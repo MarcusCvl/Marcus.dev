@@ -17,6 +17,8 @@
   --fs-sm: 0.5rem;
   --fs-detail: 0.75rem;
   --fs-base: 1rem;
+  --fs-header-tablet: 1.25rem;
+  --fs-header-desktop: 1.5rem;
   --fs-g: 2rem;
   --fs-title: 2.5rem;
   --fs-xg: 5rem;
@@ -32,7 +34,7 @@
   /*========================================LAYOUT======================================== */
 
   --container-width: 1200px;
-  --header-height: 100px;
+  --header-height: 80px;
 }
 * {
   margin: 0;
