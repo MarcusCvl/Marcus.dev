@@ -138,9 +138,14 @@
   width: 1.25rem;
   height: 1.25rem;
 }
+/*==========tablet==========*/
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url("../assets/bg-img.webp");
+    background-image:
+      linear-gradient(to left, var(--background-color) 0%, transparent 15%),
+      linear-gradient(to right, var(--background-color) 35%, transparent 75%),
+      linear-gradient(to top, var(--background-color) 0%, transparent 15%),
+      url("../assets/bg-img.webp");
     background-position: right -7rem top var(--header-height);
     background-size: contain;
     background-repeat: no-repeat;
@@ -193,16 +198,31 @@
 /*==========desktop==========*/
 @media screen and (min-width: 1024px) {
   .hero {
-    background-position: right 10% top var(--header-height);
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      calc(50% + 13rem) var(--header-height);
+    padding-inline: 10%;
   }
+  .primary-button,
+  .secondary-button {
+    padding: 1rem 0rem;
+    font-size: var(--fs-detail);
+    font-weight: var(--title-weight);
+  }
+
   .hero-copy {
-    width: 50%;
+    width: 70%;
   }
 }
 /*==========ULTRAWIDE==========*/
 @media screen and (min-width: 1536px) {
   .hero {
-    padding-left: 5%;
-    background-position: right 15% top var(--header-height);
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      calc(50% + 24rem) var(--header-height);
   }
 }
