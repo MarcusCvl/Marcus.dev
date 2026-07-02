@@ -3,6 +3,7 @@
   position: relative;
   overflow: hidden;
   padding-top: var(--header-height);
+  border-bottom: 1px solid var(--border-color);
 }
 .hero-content {
   display: flex;
@@ -64,7 +65,7 @@
 .hero-subtitle {
   font-weight: var(--title-weight);
   font-size: var(--fs-base);
-  width: 90%;
+  width: 14rem;
 }
 .hero-text {
   font-size: var(--fs-detail);
@@ -112,7 +113,6 @@
   gap: 1rem;
   padding-bottom: 1rem;
   width: 100%;
-  border-bottom: 1px solid var(--border-color);
 }
 .social-text {
   color: var(--primary-color);
@@ -137,4 +137,72 @@
 .btn-social img {
   width: 1.25rem;
   height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url("../assets/bg-img.webp");
+    background-position: right -7rem top var(--header-height);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hero-subtitle {
+    width: 100%;
+  }
+  .hero-copy {
+    width: 100%;
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+  .hero-copy::before {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.98) 20%,
+      rgba(0, 0, 0, 0.85) 75%,
+      rgba(0, 0, 0, 0.45) 90%,
+      transparent 100%
+    );
+  }
+  .hero-text {
+    width: 100%;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100%;
+  }
+  .hero-img img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-cta {
+    width: 100%;
+    flex-direction: row;
+  }
+  .primary-button,
+  .secondary-button {
+    width: 50%;
+    padding: 1rem;
+  }
+}
+/*==========desktop==========*/
+@media screen and (min-width: 1024px) {
+  .hero {
+    background-position: right 10% top var(--header-height);
+  }
+  .hero-copy {
+    width: 50%;
+  }
+}
+/*==========ULTRAWIDE==========*/
+@media screen and (min-width: 1536px) {
+  .hero {
+    padding-left: 5%;
+    background-position: right 15% top var(--header-height);
+  }
 }

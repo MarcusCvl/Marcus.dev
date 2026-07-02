@@ -96,12 +96,12 @@ input[type="checkbox"]:checked ~ .navbar {
     top: auto;
     right: auto;
     width: auto;
-    gap: 1.8rem;
+    gap: 1.6rem;
   }
   .nav-list {
     display: flex;
     flex-direction: row;
-    gap: 1.8rem;
+    gap: 1.6rem;
     font-size: var(--fs-base);
     align-items: center;
     padding: 0;
