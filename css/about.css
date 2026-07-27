@@ -11,7 +11,9 @@
   flex-direction: column;
   width: 100%;
   margin: auto;
+  align-items: center;
 }
+
 .section-headline {
   padding: 0.625rem 0;
   font-size: var(--fs-g);
@@ -33,6 +35,7 @@
   gap: 0.5rem;
   padding: 0.5rem;
   height: 15rem;
+  width: 100%;
 }
 
 .about-cards-img {
@@ -46,7 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0.5rem;
+  padding: 0.5rem 20%;
   gap: 0.5rem;
   min-width: 100%;
 }
@@ -68,8 +71,12 @@
   .about-content {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
   }
   .about-copy {
-    width: 50%;
+    flex: 1;
+  }
+  .about-cards {
+    flex: 1;
   }
 }
