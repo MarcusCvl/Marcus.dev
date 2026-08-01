@@ -1,0 +1,42 @@
+.why {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-color);
+  padding: 1rem;
+  gap: 1rem;
+  margin: auto;
+  height: 400px;
+}
+.why h2 {
+  color: var(--primary-color);
+  font-weight: var(--menu-text-weight);
+}
+.why-content {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+.why-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.why-cards-item {
+  display: flex;
+  gap: 1rem;
+}
+.why-cards-item-img {
+  width: 33px;
+  height: 33px;
+}
+.why-cards-items-title {
+  color: var(--primary-hover);
+  font-size: var(--fs-detail);
+}
+.why-cards-items-text {
+  font-size: var(--fs-detail);
+}
+/***********desktop***********/
+@media screen and (min-width: 1024px) {
+}

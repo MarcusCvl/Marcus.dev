@@ -5,6 +5,7 @@
   border-top: 1px solid var(--border-color);
   padding: 1rem;
   margin: auto;
+  gap: 1rem;
 }
 .about-content {
   display: flex;
@@ -13,7 +14,9 @@
   margin: auto;
   align-items: center;
 }
-
+.about-copy {
+  padding: 0;
+}
 .section-headline {
   padding: 0.625rem 0;
   font-size: var(--fs-g);
@@ -33,7 +36,7 @@
   align-items: stretch;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.325rem;
   height: 15rem;
   width: 100%;
 }
