@@ -55,6 +55,10 @@ body {
   color: var(--text-color);
   font-family: var(--ftexts);
 }
+main {
+  display: flex;
+  flex-direction: column;
+}
 a {
   display: flex;
   text-decoration: none;
@@ -70,7 +74,7 @@ span {
   justify-content: flex-start;
 }
 .section-title {
-  font-size: var(--fs-detail);
+  font-size: var(--fs-base);
   color: var(--primary-color);
   font-weight: var(--text-weight);
 }

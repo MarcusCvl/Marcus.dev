@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.footer p {
+  font-size: var(--fs-detail);
+  color: var(--text-color);
+}
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+.footer-links-img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.footer-links-img:hover {
+  filter: brightness(0.8);
+}

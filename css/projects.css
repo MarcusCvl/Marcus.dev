@@ -18,7 +18,7 @@
   flex-direction: column;
   background-color: var(--card-color);
   border-radius: 1.75rem;
-  border: 1px solid var(--secondary-hover);
+  border: 1px solid var(--border-color);
 }
 .projects-cards-img {
   width: 90vw;
