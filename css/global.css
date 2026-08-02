@@ -7,11 +7,14 @@
   --primary-hover: #0aca57;
   --secondary-hover: #132e1e;
   --background-color: #000000;
+  --secondary-background: #018636;
   --card-color: #0a0a0a;
   --border-color: #14191c;
 
   --title-color: #ffffff;
   --text-color: #d5d8dc;
+
+  --icons-color: #49cc33;
 
   /*========================================TAMANHOS======================================== */
 
@@ -35,7 +38,7 @@
   --menu-text-weight: 500;
   /*========================================LAYOUT======================================== */
 
-  --container-width: 1200px;
+  --container-width: 1100px;
   --header-height: 83px;
 }
 * {
@@ -43,10 +46,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+section > * {
+  max-width: var(--container-width);
+  margin-inline: auto;
+}
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--ftexts);
+}
+main {
+  display: flex;
+  flex-direction: column;
 }
 a {
   display: flex;
@@ -57,8 +68,13 @@ a {
 span {
   color: var(--primary-color);
 }
+.title {
+  display: flex;
+
+  justify-content: flex-start;
+}
 .section-title {
-  font-size: var(--fs-detail);
+  font-size: var(--fs-base);
   color: var(--primary-color);
   font-weight: var(--text-weight);
 }
