@@ -81,6 +81,7 @@
 .primary-button {
   display: flex;
   justify-content: center;
+  color: var(--background-color);
   width: 100%;
   padding: 0.75rem 1.5rem;
   border: 1px solid var(--primary-color);
@@ -190,7 +191,9 @@
 /*==========desktop==========*/
 @media screen and (min-width: 1024px) {
   .hero {
-    background-position: right -3rem top var(--header-height);
+    background-position: right
+      clamp(-3rem, calc(-3rem + (100vw - 1024px) * 0.25), 12rem) top
+      var(--header-height);
   }
   .primary-button,
   .secondary-button {
