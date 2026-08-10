@@ -12,6 +12,12 @@
   width: 100%;
   border-bottom: 1px solid var(--border-color);
 }
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -76,7 +82,15 @@ input[type="checkbox"]:checked ~ .navbar {
     background-color: var(--background-color);
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    margin: 0 auto;
+  }
+  .header-content {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+    margin-inline: auto;
   }
   .navigation {
     margin-top: 0;

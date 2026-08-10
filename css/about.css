@@ -1,11 +1,11 @@
 .about {
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 100%;
   border-top: 1px solid var(--border-color);
-  padding: 1rem;
+  padding: 5rem 1rem 1rem 1rem;
   margin: auto;
-  gap: 1rem;
+  gap: 3rem;
 }
 .about-content {
   display: flex;
@@ -55,6 +55,9 @@
   padding: 0.5rem 20%;
   gap: 0.5rem;
   min-width: 100%;
+}
+.about-cards-item.two-lines {
+  padding: 0.5rem 10%;
 }
 .about-cards-items-copy {
   display: flex;

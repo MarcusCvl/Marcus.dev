@@ -9,9 +9,10 @@
   </head>
   <body>
     <header class="header">
-      <a class="logo" href="#">
+      <div class="header-content">
+        <a class="logo" href="#">
         <span class="logo-span"> &lt;/&gt; </span> Marcus
-        <span class="logo-span"> .dev </span>
+        <span class="logo-span">.dev </span>
       </a>
       <div class="navigation">
         <label for="menu">
@@ -29,6 +30,7 @@
           </ul>
           <a class="btn-download" href="#"> Download CV </a>
         </nav>
+      </div>
       </div>
     </header>
     <main>
@@ -58,13 +60,13 @@
             <div class="social-links">
               <p class="social-text">REDES SOCIAIS</p>
               <div class="social">
-                <a class="btn-social"
+                <a class="btn-social " href="https://www.instagram.com/carvalho0mrc/" target="_blank" rel="noopener noreferrer"
                   ><img src="assets/instagram.png" alt="instagram"
                 /></a>
-                <a class="btn-social"
+                <a class="btn-social " href="https://www.linkedin.com/in/marcus-carvalho1/" target="_blank" rel="noopener noreferrer"
                   ><img src="assets/linkedin.png" alt="linkedin"
                 /></a>
-                <a class="btn-social"
+                <a class="btn-social " href="https://github.com/marcuscvl" target="_blank" rel="noopener noreferrer"
                   ><img src="assets/github.png" alt="github icon"
                 /></a>
               </div>
@@ -242,7 +244,7 @@
             </p>
           </div>
           <div class="about-cards">
-            <div class="about-cards-item">
+            <div class="about-cards-item two-lines">
               <img class="about-cards-img" src="assets/rocket.png" alt="foco" />
               <div class="about-cards-items-copy">
                 <h3 class="about-cards-items-title">Foco</h3>
@@ -277,7 +279,7 @@
                 <p class="about-cards-items-text">Em andamento</p>
               </div>
             </div>
-            <div class="about-cards-item">
+            <div class="about-cards-item two-lines">
               <img
                 class="about-cards-img"
                 src="assets/loc.png"
@@ -469,27 +471,38 @@
       </section>
       <section class="contact" id="contato">
         <h2 class="section-title">CONTATO</h2>
+        
         <div class="contact-content">
-          <div class="contact-copy">
+          
+          <div class="contact-form">
+            <div class="contact-copy">
             <h3 class="section-headline">
-              Tem um projeto em mente? Vamos conversar!
+              Tem um projeto em mente?<span class="destaque"> Vamos conversar!</span>
             </h3>
             <p class="contact-text">
-              Estou disponível para projetos freelance e oportunidades de
+              Disponível para projetos freelance e oportunidades de
               colaboração.
             </p>
           </div>
-          <div class="contact-form">
             <form action="#" method="post" class="form">
-              <label for="name" id="name-label" class="form-label">Nome:</label>
+              <div class="form-header">
+                <img class="form-image" src="assets/message.png" alt="Mensagem" />
+                <div class="form-header-copy">
+                  <h3 class="form-title">Entre em contato</h3>
+                  <p class="form-text">
+                    Preencha o formulário abaixo e entrarei em contato.</p>
+                </div>
+              </div>
+              <label for="name" id="name-label" class="form-label"><img class= "label-img" src="assets/user.png" alt="nome" /> Nome:</label>
               <input id="name"
+
                 type="text"
                 name="name"
                 placeholder="Nome"
                 required
                 class="form-input"
               />
-              <label for="email" id="email-label" class="form-label">Email:</label>
+              <label for="email" id="email-label" class="form-label"><img class= "label-img" src="assets/sign.png" alt="endereço de email" /> Email:</label>
               <input id="email"
                 type="email"
                 name="email"
@@ -497,15 +510,70 @@
                 required
                 class="form-input"
               />
-              <label for="message" id="message-label" class="form-label">Mensagem:</label>
+              <label for="message" id="message-label" class="form-label"><img class= "label-img" src="assets/edit.png" alt="escreva" /> Mensagem:</label>
               <textarea id="message"
                 name="message"
-                placeholder="Mensagem"
+                placeholder="Digite aqui qual a sua ideia ou projeto..."
                 required
                 class="form-textarea"
               ></textarea>
               <button type="submit" class="form-button">Enviar</button>
             </form>
+          </div>
+          <div class="contact-ways">
+            <h3 class="section-headline">
+              Outras formas de contato:
+            </h3>
+          <div class="contact-cards">
+            
+            <div class="contact-cards-item">
+              <div class="contact-cards-item-content">
+                <div class="contact-cards-icon">
+                <img class="contact-cards-img" src="assets/whatsapp-green.png" alt="whatsapp" />
+              </div>  
+              <div class="contact-cards-item-copy">
+                <h4 class="contact-cards-items-title">WhatsApp</h4>
+                <a class="contact-cards-link" href="https://wa.me/5561981810706" target="_blank" rel="noopener noreferrer">Enviar mensagem</a>
+                <p class="contact-cards-items-text">Resposta rápida</p> 
+              </div>
+              </div>
+            </div>
+            <div class="contact-cards-item">
+              <div class="contact-cards-item-content">
+              <div class="contact-cards-icon">
+                <img class="contact-cards-img" src="assets/linkedin-green.png" alt="LinkedIn" />
+              </div>  
+              <div class="contact-cards-item-copy">
+                <h4 class="contact-cards-items-title">LinkedIn</h4>
+                <a class="contact-cards-link" href="https://www.linkedin.com/in/marcus-carvalho1/" target="_blank" rel="noopener noreferrer">Ver perfil</a>
+                <p class="contact-cards-items-text">Conecte-se comigo</p> 
+              </div>
+              </div>
+            </div>
+            <div class="contact-cards-item">
+              <div class="contact-cards-item-content">
+              <div class="contact-cards-icon">
+                <img class="contact-cards-img" src="assets/telegram-green.png" alt="telegram">
+              </div>  
+              <div class="contact-cards-item-copy">
+                <h4 class="contact-cards-items-title">Telegram</h4>
+                <a class="contact-cards-link" href="https://t.me/Marcuscarv1" target="_blank" rel="noopener noreferrer">Enviar mensagem</a>
+                <p class="contact-cards-items-text">Resposta em até 24 horas</p> 
+              </div>
+              </div>
+            </div>
+            <div class="contact-cards-item">
+              <div class="contact-cards-item-content">
+              <div class="contact-cards-icon">
+                <img class="contact-cards-img" src="assets/github-green.png" alt="GitHub">
+              </div>  
+              <div class="contact-cards-item-copy">
+                <h4 class="contact-cards-items-title">GitHub</h4>
+                <a class="contact-cards-link" href="https://github.com/MarcusCvl" target="_blank" rel="noopener noreferrer">github.com/MarcusCvl</a>
+                <p class="contact-cards-items-text">Confira meus projetos</p> 
+              </div>
+              </div>
+            </div>
           </div>
           <div class="contact-explain">
             <div class="contact-explain-content">
@@ -537,6 +605,7 @@
               </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
     </main>
