@@ -180,11 +180,11 @@
   }
   .hero-cta {
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
   }
   .primary-button,
   .secondary-button {
-    width: 50%;
+    width: 100%;
     padding: 1rem;
   }
 }
@@ -194,6 +194,9 @@
     background-position: right
       clamp(-3rem, calc(-3rem + (100vw - 1024px) * 0.25), 12rem) top
       var(--header-height);
+  }
+  .hero-cta {
+    flex-direction: row;
   }
   .primary-button,
   .secondary-button {
