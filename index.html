@@ -15,20 +15,23 @@
         <span class="logo-span">.dev </span>
       </a>
       <div class="navigation">
-        <label for="menu">
-          <img class="menu-hamburguer" src="assets/menu.png" alt="icone menu" />
-        </label>
-        <input type="checkbox" id="menu" hidden />
+  <input type="checkbox" id="menu" hidden />
+  <label for="menu" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </label>
 
         <nav class="navbar">
           <ul class="nav-list">
-            <li><a class="nav-link" href="#sobre">Sobre</a></li>
+            
             <li><a class="nav-link" href="#serviços">Serviços</a></li>
+            <li><a class="nav-link" href="#sobre">Sobre</a></li>
             <li><a class="nav-link" href="#projetos">Projetos</a></li>
             <li><a class="nav-link" href="#tecnologias">Tecnologias</a></li>
             <li><a class="nav-link" href="#contato">Contato</a></li>
           </ul>
-          <a class="btn-download" href="#"> Download CV </a>
+          <a class="btn-download" href="https://wa.me/5561981810706" target="_blank" rel="noopener noreferrer" > Chamar no whatsapp </a>
         </nav>
       </div>
       </div>
@@ -53,7 +56,7 @@
             </div>
 
             <div class="hero-cta">
-              <a class="primary-button" href="#">Fazer orçamento</a>
+              <a class="primary-button" href="#contato">Solicitar orçamento</a>
               <a class="secondary-button" href="#">Ver Projetos →</a>
             </div>
 
@@ -77,12 +80,12 @@
           </figure>
         </div>
       </section>
-      <section class="why">
+      <section class="why" id="serviços">
         <h2 class="section-title">POR QUE SUA EMPRESA PRECISA DE UM SITE</h2>
         <div class="why-content">
           <div class="why-copy"></div>
           <div class="why-cards">
-            <div class="why-cards-item">
+            <div class="why-cards-item reveal">
               <img
                 class="why-cards-item-img"
                 src="assets/cred2.png"
@@ -96,7 +99,7 @@
                 </p>
               </div>
             </div>
-            <div class="why-cards-item">
+            <div class="why-cards-item reveal">
               <img
                 class="why-cards-item-img"
                 src="assets/oportunity2.png"
@@ -110,7 +113,7 @@
                 </p>
               </div>
             </div>
-            <div class="why-cards-item">
+            <div class="why-cards-item reveal">
               <img
                 class="why-cards-item-img"
                 src="assets/net2.png"
@@ -124,7 +127,7 @@
                 </p>
               </div>
             </div>
-            <div class="why-cards-item">
+            <div class="why-cards-item reveal">
               <img
                 class="why-cards-item-img"
                 src="assets/24h2.png"
@@ -141,7 +144,7 @@
           </div>
         </div>
       </section>
-      <section class="services" id="serviços">
+      <section class="services">
         <div class="title"><h2 class="section-title">SERVIÇOS</h2></div>
         <div class="services-content">
           <div class="services-copy">
@@ -150,7 +153,7 @@
             </h3>
           </div>
           <div class="services-cards">
-            <div class="services-cards-item">
+            <div class="services-cards-item reveal">
               <div class="services-cards-icon">
                 <img
                   class="services-cards-img"
@@ -170,12 +173,11 @@
                   <li>Design responsivo</li>
                   <li>Otimização para celulares</li>
                   <li>Integração com Whatsapp</li>
-                  <li>Formulários de contato</li>
                   <li>Otimização em pesquisas(SEO basico)</li>
                 </ul>
               </div>
             </div>
-            <div class="services-cards-item">
+            <div class="services-cards-item reveal">
               <div class="services-cards-icon">
                 <img
                   class="services-cards-img"
@@ -198,7 +200,7 @@
                 </ul>
               </div>
             </div>
-            <div class="services-cards-item">
+            <div class="services-cards-item reveal">
               <div class="services-cards-icon">
                 <img
                   class="services-cards-img"
@@ -299,7 +301,7 @@
         <div class="projects-content">
           <h2 class="section-title">PROJETOS</h2>
           <div class="projects-cards">
-            <article class="projects-cards-item">
+            <article class="projects-cards-item reveal">
               <div class="projects-thumb" aria-hidden="true">
                 <img
                   class="projects-cards-img"
@@ -334,7 +336,7 @@
                 </div>
               </div>
             </article>
-            <article class="projects-cards-item">
+            <article class="projects-cards-item reveal">
               <div class="projects-thumb" aria-hidden="true">
                 <img
                   class="projects-cards-img"
@@ -371,7 +373,7 @@
                 </div>
               </div>
             </article>
-            <article class="projects-cards-item">
+            <article class="projects-cards-item reveal">
               <div class="projects-thumb" aria-hidden="true">
                 <img
                   class="projects-cards-img"
@@ -484,7 +486,7 @@
               colaboração.
             </p>
           </div>
-            <form action="#" method="post" class="form">
+            <form action="#" class="form">
               <div class="form-header">
                 <img class="form-image" src="assets/message.png" alt="Mensagem" />
                 <div class="form-header-copy">
@@ -493,6 +495,7 @@
                     Preencha o formulário abaixo e entrarei em contato.</p>
                 </div>
               </div>
+              <input type="text" name="website" id="website" style="display:none" tabindex="-1" autocomplete="off" />
               <label for="name" id="name-label" class="form-label"><img class= "label-img" src="assets/user.png" alt="nome" /> Nome:</label>
               <input id="name"
 
@@ -510,14 +513,30 @@
                 required
                 class="form-input"
               />
+              <label for="phone" id="phone-label" class="form-label"><img class="label-img" src="assets/contact.png" alt="Número de telefone"> Telefone:</label>
+              <input id="phone"
+              type="text"
+              name="phone"
+              placeholder="(61)99999-9999"
+              required
+              class="form-input">
+              <label for="selection" id="selection-label" class="form-label"><img class="label-img" src="assets/service.png" alt="selecione um serviço">Serviço de interesse:</label>
+              <select id="selection" name="selection" required class="form-select" placeholder="Selecione um serviço">
+                <option value="" disabled selected>Selecione um serviço</option>
+                <option value="landing-page">Landing Page</option>
+                <option value="site-institucional">Site Institucional</option>
+                <option value="Site-multipages">Site com multiplas páginas e integrações</option>
+                <option value="integracoes">Integrações Inteligentes</option>
+                <option value=" Formulario">Formulário</option>
+                </select>
               <label for="message" id="message-label" class="form-label"><img class= "label-img" src="assets/edit.png" alt="escreva" /> Mensagem:</label>
               <textarea id="message"
                 name="message"
-                placeholder="Digite aqui qual a sua ideia ou projeto..."
+                placeholder="Conte brevemente sobre o que você precisa..."
                 required
                 class="form-textarea"
               ></textarea>
-              <button type="submit" class="form-button">Enviar</button>
+              <button type="submit" class="form-button" >Enviar</button>
             </form>
           </div>
           <div class="contact-ways">
@@ -628,6 +647,9 @@
         </a>
       </div>
     </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/form.js"></script>
   </body>
   
 </html>
