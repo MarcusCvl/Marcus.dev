@@ -19,12 +19,14 @@
 }
 .why-cards {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 3rem;
 }
 .why-cards-item {
   display: flex;
   gap: 1rem;
+  max-width: 400px;
 }
 .why-cards-item-img {
   width: 33px;
