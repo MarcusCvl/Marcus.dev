@@ -18,8 +18,6 @@ form.addEventListener("submit", async function (event) {
   const dados = {
     name: form.name.value,
     email: form.email.value,
-    phone: form.phone.value,
-    selection: form.selection.value,
     message: form.message.value,
   };
 

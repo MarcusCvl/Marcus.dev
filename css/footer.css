@@ -1,24 +1,45 @@
+/*==========mobile==========*/
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  text-align: center;
 }
-.footer p {
+/* linhas dos dois lados do </> */
+.footer-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: var(--container-width);
+}
+.footer-divider::before,
+.footer-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color);
+}
+.footer-divider-logo {
+  font-weight: var(--title-weight);
+}
+.footer-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.footer-title {
+  font-size: var(--fs-base);
+  font-weight: var(--title-weight);
+  color: var(--title-color);
+}
+.footer-text {
   font-size: var(--fs-detail);
   color: var(--text-color);
 }
-.footer-links {
-  display: flex;
-  gap: 1rem;
-}
-.footer-links-img {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-.footer-links-img:hover {
-  filter: brightness(0.6);
-  transform: scale(1.05);
+.footer-rights {
+  font-size: var(--fs-card);
+  color: var(--text-color);
 }

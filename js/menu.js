@@ -11,6 +11,11 @@ menuCheckbox.addEventListener("change", () => {
   menuToggle.setAttribute("aria-expanded", menuCheckbox.checked);
 });
 
+// com o menu cobrindo a tela, ele precisa fechar ao escolher um link
+navigation.querySelectorAll(".navbar a").forEach((link) => {
+  link.addEventListener("click", fecharMenu);
+});
+
 document.addEventListener("click", (event) => {
   const cliqueForaDoMenu = !navigation.contains(event.target);
   if (menuCheckbox.checked && cliqueForaDoMenu) {

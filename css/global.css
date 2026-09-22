@@ -53,7 +53,9 @@ html {
 section[id] {
   scroll-margin-top: var(--header-height);
 }
+/* width evita que a margem automática encolha os blocos da seção */
 section > * {
+  width: 100%;
   max-width: var(--container-width);
   margin-inline: auto;
 }
@@ -81,9 +83,15 @@ span {
   justify-content: flex-start;
 }
 .section-title {
-  font-size: var(--fs-base);
+  font-size: var(--fs-detail);
+  font-weight: var(--title-weight);
   color: var(--primary-color);
-  font-weight: var(--text-weight);
+}
+.section-headline {
+  font-size: var(--fs-g);
+  font-weight: var(--title-weight);
+  color: var(--title-color);
+  line-height: 1.2;
 }
 
 .reveal {
@@ -104,5 +112,11 @@ span {
     transition: none;
     opacity: 1;
     transform: none;
+  }
+}
+/*==========desktop==========*/
+@media screen and (min-width: 1024px) {
+  .section-headline {
+    font-size: var(--fs-title);
   }
 }
