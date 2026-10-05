@@ -1,5 +1,5 @@
 const form = document.querySelector(".form");
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzuDMly_gjx9qcP2TX3F2tOyQp_nlAoMuX3Uh3fUyJFlYxZq-j-tM9Jxw6meWTDxpIjeA/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzdmaPGPZoDE1LdmBsdlmO6uHzm3i8XDqJCSja2qRHWR_qPla0v3eSg_wlpakBTXkyE/exec";
 
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
