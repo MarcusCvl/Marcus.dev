@@ -44,8 +44,12 @@
   align-items: flex-start;
   padding-top: 1rem;
 }
+/* ícones em svg inline: a cor vem do currentColor */
 .label-img {
+  flex-shrink: 0;
   width: 20px;
+  height: 20px;
+  color: var(--icons-color);
 }
 .form-input,
 .form-textarea {
