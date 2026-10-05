@@ -6,6 +6,15 @@ const observer = new IntersectionObserver(
       if (entrada.isIntersecting) {
         entrada.target.classList.add("visivel");
         observer.unobserve(entrada.target);
+
+        // o atraso em cascata só serve para a entrada, depois o hover responde na hora
+        entrada.target.addEventListener(
+          "transitionend",
+          () => {
+            entrada.target.style.transitionDelay = "0s";
+          },
+          { once: true }
+        );
       }
     });
   },

@@ -1,129 +1,184 @@
+/*==========mobile==========*/
 .projects {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   padding: 5rem 1rem 1rem 1rem;
-  width: 100%;
   border-top: 1px solid var(--border-color);
 }
 .projects-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
+}
+.projects-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.projects-text {
+  font-size: var(--fs-base);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+/* no celular os filtros rolam de lado em vez de quebrar linha */
+.projects-filters {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.projects-filters-button {
+  flex-shrink: 0;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  background-color: var(--card-color);
+  font-family: var(--ftexts);
+  font-size: var(--fs-base);
+  font-weight: var(--menu-text-weight);
+  color: var(--title-color);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.projects-filters-button:hover {
+  background-color: var(--secondary-hover);
+}
+.projects-filters-button.ativo {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  font-weight: var(--title-weight);
+  color: var(--background-color);
 }
 .projects-cards {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  align-items: center;
 }
 .projects-cards-item {
   display: flex;
   flex-direction: column;
-  background-color: var(--card-color);
-  border-radius: 1.75rem;
-  border: 1px solid var(--border-color);
-}
-.projects-cards-item:hover {
-  transition: all 0.2s;
-  transition-delay: 0s !important;
-  transform: scale(1.05);
-  border-bottom: 2px solid var(--primary-hover);
+  border: 1px solid var(--glass-border-color);
+  border-radius: 1.25rem;
+  background-color: var(--glass-color);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  overflow: hidden;
 }
 .projects-cards-item.reveal:nth-child(1) {
   transition-delay: 0s;
 }
 .projects-cards-item.reveal:nth-child(2) {
-  transition-delay: 0.2s;
+  transition-delay: 0.15s;
 }
 .projects-cards-item.reveal:nth-child(3) {
-  transition-delay: 0.4s;
+  transition-delay: 0.3s;
+}
+/* zera o atraso da entrada para o hover responder na hora */
+.projects-cards-item.reveal:hover {
+  border-color: var(--primary-hover);
+  transition: all 0.3s;
+  transition-delay: 0s;
+  transform: scale(1.02);
 }
 .projects-cards-img {
-  width: 90vw;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-  margin: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-color);
 }
-.projects-copy {
+.projects-cards-item-copy {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  flex: 1;
+  gap: 0.75rem;
+  padding: 1.25rem;
 }
-.projects-tags {
+.projects-cards-item-title {
+  font-size: var(--fs-header-tablet);
+  color: var(--title-color);
+}
+.projects-cards-item-text {
+  font-size: var(--fs-base);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+.projects-cards-tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  font-size: var(--fs-base);
-  align-items: center;
-  justify-content: flex-end;
+  list-style: none;
 }
-.projects-cards-title {
-  font-size: var(--fs-base);
+.projects-cards-tags-item {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background-color: var(--imputs-color);
+  font-size: var(--fs-detail);
+  color: var(--text-color);
 }
-.projects-cards-text {
-  max-width: 80vw;
-}
-.projects-buttom-img {
-  width: 16px;
-  height: 16px;
-}
-.projects-p-buttom {
-  background-color: var(--primary-color);
-  color: var(--background-color);
-  font-weight: var(--menu-text-weight);
-  border-radius: 1rem;
-  padding: 0.5rem;
-}
-.projects-p-buttom:hover {
-  background-color: var(--primary-hover);
-  color: var(--background-color);
-  transform: scale(1.05);
+.projects-cards-link {
+  align-self: flex-start;
+  margin-top: auto;
+  font-weight: var(--title-weight);
+  color: var(--primary-color);
   transition: all 0.3s;
 }
-.projects-s-buttom {
-  border-radius: 1rem;
-  padding: 0.5rem;
-  align-items: center;
+.projects-cards-link:hover {
+  color: var(--primary-hover);
 }
-.projects-s-buttom:hover {
-  transform: scale(1.05);
-  transition: all 0.3s;
+.projects-empty {
+  padding: 2rem 1rem;
+  border: 1px dashed var(--border-color);
+  border-radius: 1.25rem;
+  font-size: var(--fs-base);
+  color: var(--text-color);
+  text-align: center;
+}
+.projects-cards-soon {
+  margin-top: auto;
+  font-weight: var(--title-weight);
+  color: var(--text-color);
 }
 .projects-button {
-  display: flex;
+  align-self: center;
+  padding: 0.75rem 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1.5rem;
+  background-color: transparent;
   font-family: var(--ftexts);
+  font-size: var(--fs-base);
   font-weight: var(--menu-text-weight);
-  gap: 0.5rem;
-  align-items: center;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border-radius: 1rem;
-  border: 1px solid var(--border-color);
-  padding: 0.5rem 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: all 0.3s;
 }
 .projects-button:hover {
   background-color: var(--secondary-hover);
-  color: var(--text-color);
-  transform: scale(1.1);
-  transition: all 0.3s;
 }
-/***********desktop***********/
-@media screen and (min-width: 1023px) {
+/* classes adicionadas pelo filter.js: escondido = fora do filtro, recolhido = passou do limite do "ver mais" */
+.projects-cards-item.escondido,
+.projects-cards-item.recolhido,
+.projects-empty.escondido,
+.projects-button.escondido {
+  display: none;
+}
+/*==========tablet==========*/
+@media screen and (min-width: 768px) {
+  .projects {
+    padding: 5rem 2rem 1rem 2rem;
+  }
   .projects-cards {
-    flex-direction: row;
-    flex: 1;
-    align-items: stretch;
-    height: 100%;
-    max-width: 100%;
-    margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .projects-cards-img {
-    max-width: 100%;
+}
+/*==========desktop==========*/
+@media screen and (min-width: 1024px) {
+  .projects-copy {
+    max-width: 600px;
   }
-  .projects-cards-text {
-    max-width: fit-content;
-  }
-  .projects-tags {
-    margin-top: auto;
+  .projects-cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
