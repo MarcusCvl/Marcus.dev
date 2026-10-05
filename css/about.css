@@ -23,7 +23,8 @@
 }
 .about-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* minmax(0, 1fr) deixa a coluna encolher menos que a palavra mais longa */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
 }
 .about-cards-item {
@@ -31,9 +32,11 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1.25rem 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border-color);
   border-radius: 1rem;
-  background-color: var(--card-color);
+  background-color: var(--glass-color);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
   transition: all 0.3s;
 }
 .about-cards-item:hover {
@@ -50,14 +53,18 @@
 }
 .about-cards-item.reveal:nth-child(4) {
   transition-delay: 0.45s;
-}
+}/* ícones em svg inline: a cor vem do currentColor */
 .about-cards-img {
   width: 32px;
+  height: 32px;
+  color: var(--icons-color);
 }
 .about-cards-item-copy {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  /* quebra palavras longas (ex.: Desenvolvimento) em telas bem estreitas */
+  overflow-wrap: break-word;
 }
 .about-cards-item-title {
   font-size: var(--fs-base);

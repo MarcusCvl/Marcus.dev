@@ -1,6 +1,5 @@
 /*===========mobile==========*/
 .header {
-  background-color: var(--background-color);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,7 +9,17 @@
   z-index: 1000;
   position: fixed;
   width: 100%;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--glass-border-color);
+}
+/* vidro fica no ::before porque backdrop-filter no próprio header prenderia o menu fixo dentro dele */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--glass-header-color);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
 }
 .header-content {
   display: flex;
@@ -66,7 +75,9 @@ input#menu:checked ~ .menu-toggle .bar:nth-child(3) {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  background-color: var(--background-color);
+  background-color: var(--glass-header-color);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
   padding: 1rem;
   position: fixed;
   top: var(--header-height);
@@ -99,7 +110,6 @@ body:has(input#menu:checked) {
   text-decoration: none;
   list-style: none;
   align-items: center;
-  background-color: var(--background-color);
 }
 .btn-img {
   width: 1rem;
@@ -127,7 +137,6 @@ body:has(input#menu:checked) {
 /*==========Tablet==========*/
 @media screen and (min-width: 968px) {
   .header {
-    background-color: var(--background-color);
     align-items: center;
     display: flex;
     justify-content: center;
@@ -156,6 +165,8 @@ body:has(input#menu:checked) {
     align-items: center;
     position: relative;
     background: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     top: auto;
     right: auto;
     bottom: auto;

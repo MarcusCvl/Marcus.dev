@@ -58,9 +58,11 @@
 .projects-cards-item {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border-color);
   border-radius: 1.25rem;
-  background-color: var(--card-color);
+  background-color: var(--glass-color);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
   overflow: hidden;
 }
 .projects-cards-item.reveal:nth-child(1) {

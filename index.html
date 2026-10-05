@@ -64,8 +64,8 @@
             </div>
 
             <div class="hero-cta">
-              <a class="primary-button" href="#contato">Solicitar orçamento</a>
-              <a class="secondary-button" href="#projetos">Ver Projetos →</a>
+              <a class="primary-button" href="#projetos">Ver projetos →</a>
+              <a class="secondary-button" href="#sobre">Sobre mim</a>
             </div>
 
             <div class="social-links">
@@ -87,6 +87,7 @@
             <img src="assets/bg-img.webp" alt="imagem marcus" />
           </figure>
         </div>
+        <p class="hero-tagline">IDEIAS → CÓDIGO → EXPERIÊNCIAS</p>
       </section>
       <section class="about" id="sobre">
         <h2 class="section-title">SOBRE MIM</h2>
@@ -105,40 +106,79 @@
           </div>
           <div class="about-cards">
             <div class="about-cards-item reveal">
-              <img class="about-cards-img" src="assets/code.png" alt="código" />
+              <svg
+                class="about-cards-img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
               <div class="about-cards-item-copy">
                 <h4 class="about-cards-item-title">Foco</h4>
                 <p class="about-cards-item-text">Desenvolvimento Web</p>
               </div>
             </div>
             <div class="about-cards-item reveal">
-              <img
+              <svg
                 class="about-cards-img"
-                src="assets/lightbulb.png"
-                alt="lâmpada"
-              />
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"
+                />
+                <path d="M9 18h6" />
+                <path d="M10 22h4" />
+              </svg>
               <div class="about-cards-item-copy">
                 <h4 class="about-cards-item-title">Interesses</h4>
                 <p class="about-cards-item-text">IA, UX/UI e Tecnologias</p>
               </div>
             </div>
             <div class="about-cards-item reveal">
-              <img
+              <svg
                 class="about-cards-img"
-                src="assets/graduation.png"
-                alt="formação"
-              />
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
               <div class="about-cards-item-copy">
                 <h4 class="about-cards-item-title">Formação</h4>
                 <p class="about-cards-item-text">ADS (trancada) - Descomplica</p>
               </div>
             </div>
             <div class="about-cards-item reveal">
-              <img
+              <svg
                 class="about-cards-img"
-                src="assets/location.png"
-                alt="localização"
-              />
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
               <div class="about-cards-item-copy">
                 <h4 class="about-cards-item-title">Localização</h4>
                 <p class="about-cards-item-text">Marabá - PA</p>
@@ -249,24 +289,32 @@
                 >
               </div>
             </article>
-            <!-- placeholder: troque pelo projeto real quando ele estiver pronto -->
             <article class="projects-cards-item reveal" data-categoria="web">
               <img
                 class="projects-cards-img"
-                src="assets/project3.png"
-                alt="Prévia de um novo projeto em desenvolvimento"
+                src="assets/project3.webp"
+                alt="Página inicial do site da KODHA"
               />
               <div class="projects-cards-item-copy">
-                <h4 class="projects-cards-item-title">Em breve</h4>
+                <h4 class="projects-cards-item-title">KODHA</h4>
                 <p class="projects-cards-item-text">
-                  Novo projeto em desenvolvimento.
+                  Site institucional da KODHA, estúdio de sites e identidade
+                  visual para profissionais independentes.
                 </p>
                 <ul class="projects-cards-tags">
                   <li class="projects-cards-tags-item">HTML</li>
                   <li class="projects-cards-tags-item">CSS</li>
                   <li class="projects-cards-tags-item">JavaScript</li>
+                  <li class="projects-cards-tags-item">Responsive</li>
                 </ul>
-                <span class="projects-cards-soon">Em breve</span>
+                <a
+                  class="projects-cards-link"
+                  href="https://kodha.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver projeto KODHA"
+                  >Ver projeto →</a
+                >
               </div>
             </article>
           </div>
@@ -295,11 +343,23 @@
           <div class="learning-cards">
             <div class="learning-cards-item reveal">
               <div class="learning-cards-icon">
-                <img
+                <svg
                   class="learning-cards-img"
-                  src="assets/course-ia.png"
-                  alt="curso de IA"
-                />
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 8V4H8" />
+                  <rect width="16" height="12" x="4" y="8" rx="2" />
+                  <path d="M2 14h2" />
+                  <path d="M20 14h2" />
+                  <path d="M15 13v2" />
+                  <path d="M9 13v2" />
+                </svg>
               </div>
               <div class="learning-cards-item-copy">
                 <h4 class="learning-cards-item-title">
@@ -318,11 +378,20 @@
             </div>
             <div class="learning-cards-item reveal">
               <div class="learning-cards-icon">
-                <img
+                <svg
                   class="learning-cards-img"
-                  src="assets/course-front.png"
-                  alt="curso de front-end"
-                />
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="20" height="14" x="2" y="3" rx="2" />
+                  <path d="M8 21h8" />
+                  <path d="M12 17v4" />
+                </svg>
               </div>
               <div class="learning-cards-item-copy">
                 <h4 class="learning-cards-item-title">Front-end</h4>
@@ -339,32 +408,22 @@
             </div>
             <div class="learning-cards-item reveal">
               <div class="learning-cards-icon">
-                <img
+                <svg
                   class="learning-cards-img"
-                  src="assets/course-python.png"
-                  alt="curso de Python"
-                />
-              </div>
-              <div class="learning-cards-item-copy">
-                <h4 class="learning-cards-item-title">Python</h4>
-                <p class="learning-cards-item-text">Alura</p>
-                <p class="learning-cards-status">Em andamento</p>
-                <progress
-                  class="learning-cards-progress"
-                  value="65"
-                  max="100"
-                  aria-label="Progresso do curso"
-                ></progress>
-              </div>
-              <span class="learning-cards-arrow" aria-hidden="true">›</span>
-            </div>
-            <div class="learning-cards-item reveal">
-              <div class="learning-cards-icon">
-                <img
-                  class="learning-cards-img"
-                  src="assets/course-excel.png"
-                  alt="curso de Excel"
-                />
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="18" height="18" x="3" y="3" rx="2" />
+                  <path d="M3 9h18" />
+                  <path d="M3 15h18" />
+                  <path d="M9 9v12" />
+                  <path d="M15 9v12" />
+                </svg>
               </div>
               <div class="learning-cards-item-copy">
                 <h4 class="learning-cards-item-title">Excel</h4>
@@ -375,32 +434,19 @@
             </div>
             <div class="learning-cards-item reveal">
               <div class="learning-cards-icon">
-                <img
+                <svg
                   class="learning-cards-img"
-                  src="assets/course-power-bi.png"
-                  alt="curso de Power BI"
-                />
-              </div>
-              <div class="learning-cards-item-copy">
-                <h4 class="learning-cards-item-title">Power BI</h4>
-                <p class="learning-cards-item-text">Alura</p>
-                <p class="learning-cards-status">Em andamento</p>
-                <progress
-                  class="learning-cards-progress"
-                  value="65"
-                  max="100"
-                  aria-label="Progresso do curso"
-                ></progress>
-              </div>
-              <span class="learning-cards-arrow" aria-hidden="true">›</span>
-            </div>
-            <div class="learning-cards-item reveal">
-              <div class="learning-cards-icon">
-                <img
-                  class="learning-cards-img"
-                  src="assets/graduation.png"
-                  alt="faculdade"
-                />
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
               </div>
               <div class="learning-cards-item-copy">
                 <h4 class="learning-cards-item-title">Faculdade</h4>
@@ -451,22 +497,6 @@
             <div class="technologies-cards-item">
               <img
                 class="technologies-cards-img"
-                src="assets/react.png"
-                alt="React"
-              />
-              <p class="technologies-cards-item-text">React</p>
-            </div>
-            <div class="technologies-cards-item">
-              <img
-                class="technologies-cards-img"
-                src="assets/python.png"
-                alt="Python"
-              />
-              <p class="technologies-cards-item-text">Python</p>
-            </div>
-            <div class="technologies-cards-item">
-              <img
-                class="technologies-cards-img"
                 src="assets/git.png"
                 alt="Git"
               />
@@ -491,18 +521,18 @@
             <div class="technologies-cards-item">
               <img
                 class="technologies-cards-img"
-                src="assets/vscode.png"
-                alt="VS Code"
+                src="assets/claude.png"
+                alt="Claude"
               />
-              <p class="technologies-cards-item-text">VS Code</p>
+              <p class="technologies-cards-item-text">Claude</p>
             </div>
             <div class="technologies-cards-item">
               <img
                 class="technologies-cards-img"
-                src="assets/power-bi.png"
-                alt="Power BI"
+                src="assets/vscode.png"
+                alt="VS Code"
               />
-              <p class="technologies-cards-item-text">Power BI</p>
+              <p class="technologies-cards-item-text">VS Code</p>
             </div>
             <div class="technologies-cards-item">
               <img
@@ -512,22 +542,22 @@
               />
               <p class="technologies-cards-item-text">Excel</p>
             </div>
-            <div class="technologies-cards-item">
-              <img
-                class="technologies-cards-img"
-                src="assets/windows.png"
-                alt="Windows"
-              />
-              <p class="technologies-cards-item-text">Windows</p>
-            </div>
           </div>
           <div class="technologies-highlight reveal">
             <div class="technologies-highlight-icon">
-              <img
+              <svg
                 class="technologies-highlight-img"
-                src="assets/learning.png"
-                alt="aprendizado"
-              />
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>
             </div>
             <div class="technologies-highlight-copy">
               <h4 class="technologies-highlight-title">Sempre aprendendo</h4>

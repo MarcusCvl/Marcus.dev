@@ -1,8 +1,10 @@
 /*==========mobile==========*/
+/* fundo sólido esconde as manchas de brilho do body atrás do hero */
 .hero {
   position: relative;
   overflow: hidden;
   padding-top: var(--header-height);
+  background-color: var(--background-color);
 }
 .hero-content {
   display: flex;
@@ -30,9 +32,9 @@
   z-index: -1;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.98) 20%,
-    rgba(0, 0, 0, 0.85) 75%,
-    rgba(0, 0, 0, 0.45) 90%,
+    var(--shadow-strong-color) 20%,
+    var(--shadow-medium-color) 75%,
+    var(--shadow-soft-color) 90%,
     transparent 100%
   );
 }
@@ -115,28 +117,38 @@
   width: 100%;
 }
 .social-text {
-  color: var(--primary-color);
   font-size: var(--fs-detail);
+  color: var(--text-color);
+  letter-spacing: 0.2em;
 }
 .social {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
+/* ícones sem caixa, separados por um traço fino */
 .btn-social {
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 0.1rem solid var(--primary-hover);
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  background-color: var(--card-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   transition: all 0.3s;
 }
 .btn-social:hover {
-  background-color: var(--secondary-hover);
+  transform: scale(1.1);
+}
+.btn-social + .btn-social::before {
+  content: "";
+  width: 1px;
+  height: 1rem;
+  background-color: var(--divider-color);
 }
 .btn-social img {
   width: 1.25rem;
   height: 1.25rem;
+}
+/* frase do canto inferior direito, só aparece no desktop */
+.hero-tagline {
+  display: none;
 }
 /*==========tablet==========*/
 @media screen and (min-width: 768px) {
@@ -162,9 +174,9 @@
   .hero-copy::before {
     background: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.98) 20%,
-      rgba(0, 0, 0, 0.85) 75%,
-      rgba(0, 0, 0, 0.45) 90%,
+      var(--shadow-strong-color) 20%,
+      var(--shadow-medium-color) 75%,
+      var(--shadow-soft-color) 90%,
       transparent 100%
     );
   }
@@ -190,22 +202,106 @@
 }
 /*==========desktop==========*/
 @media screen and (min-width: 1024px) {
+  /* hero ocupa a tela toda ao abrir o site (o padding do header já entra na conta) */
+  /* o degradê tem o mesmo tamanho e posição da foto (3:2) para apagar as bordas laterais dela */
+  /* foto com 150vh de largura e centro 11rem à direita do meio da tela, deixando o rosto na direita do container */
   .hero {
-    background-position: right
-      clamp(-3rem, calc(-3rem + (100vw - 1024px) * 0.25), 12rem) top
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image:
+      linear-gradient(
+        to right,
+        var(--background-color) 0%,
+        transparent 20%,
+        transparent 80%,
+        var(--background-color) 100%
+      ),
+      url("../assets/bg-img2.webp");
+    background-position: left calc(50vw + 11rem - 75vh) top
       var(--header-height);
+    background-size: 150vh 100vh;
+  }
+  /* sombra oval que some nas bordas, sem formar um retângulo atrás do texto */
+  .hero-copy::before {
+    inset: -4rem -6rem;
+    background: radial-gradient(
+      ellipse closest-side,
+      var(--shadow-strong-color) 35%,
+      var(--shadow-medium-color) 55%,
+      var(--shadow-soft-color) 75%,
+      transparent 100%
+    );
   }
   .hero-cta {
     flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: auto;
   }
   .primary-button,
   .secondary-button {
-    padding: 1rem 0rem;
+    width: auto;
+    padding: 1rem 2rem;
     font-size: var(--fs-detail);
     font-weight: var(--title-weight);
   }
 
+  /* flex-shrink: 0 impede o figure (vazio no desktop) de espremer o texto */
   .hero-copy {
-    width: 70%;
+    flex-shrink: 0;
+    width: 55%;
+    margin-top: 0;
+  }
+  .hero-title {
+    gap: 1.25rem;
+  }
+  /* traço verde antes do "OLÁ, EU SOU" */
+  .before-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    letter-spacing: 0.2em;
+  }
+  .before-title::before {
+    content: "";
+    width: 3rem;
+    height: 1px;
+    background-color: var(--primary-color);
+  }
+  /* min-content quebra o nome em duas linhas: Marcus / Carvalho */
+  .hero-text-title {
+    width: min-content;
+    font-size: var(--fs-xg);
+    line-height: 1;
+  }
+  .hero-subtitle {
+    font-size: var(--fs-header-desktop);
+  }
+  .hero-text {
+    max-width: 450px;
+    font-size: var(--fs-base);
+    line-height: 1.5;
+  }
+  /* left e right zerados + max-width do container alinham a frase à direita do conteúdo */
+  .hero-tagline {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+    padding: 0 2rem;
+    font-size: var(--fs-card);
+    color: var(--text-color);
+    letter-spacing: 0.2em;
+  }
+  .hero-tagline::before {
+    content: "";
+    width: 3rem;
+    height: 1px;
+    background-color: var(--primary-color);
   }
 }

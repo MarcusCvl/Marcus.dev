@@ -31,9 +31,11 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border-color);
   border-radius: 1rem;
-  background-color: var(--card-color);
+  background-color: var(--glass-color);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
   transition: all 0.3s;
 }
 .learning-cards-item:hover {
@@ -50,14 +52,7 @@
 }
 .learning-cards-item.reveal:nth-child(4) {
   transition-delay: 0.45s;
-}
-.learning-cards-item.reveal:nth-child(5) {
-  transition-delay: 0.6s;
-}
-.learning-cards-item.reveal:nth-child(6) {
-  transition-delay: 0.75s;
-}
-.learning-cards-icon {
+}.learning-cards-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,8 +62,11 @@
   border-radius: 1rem;
   background-color: var(--secondary-hover);
 }
+/* ícones em svg inline: a cor vem do currentColor */
 .learning-cards-img {
   width: 36px;
+  height: 36px;
+  color: var(--icons-color);
 }
 .learning-cards-item-copy {
   display: flex;
@@ -130,8 +128,5 @@
 @media screen and (min-width: 1024px) {
   .learning-copy {
     max-width: 600px;
-  }
-  .learning-cards {
-    grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -33,9 +33,11 @@
   justify-content: center;
   gap: 0.75rem;
   padding: 1.25rem 0.5rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border-color);
   border-radius: 1rem;
-  background-color: var(--card-color);
+  background-color: var(--glass-color);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
   transition: all 0.3s;
 }
 .technologies-cards-item:hover {
@@ -59,7 +61,9 @@
   padding: 1.25rem;
   border: 1px solid var(--primary-hover);
   border-radius: 1rem;
-  background-color: var(--secondary-hover);
+  background-color: var(--glow-color);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
 }
 .technologies-highlight-icon {
   display: flex;
@@ -70,8 +74,11 @@
   border: 1px solid var(--primary-hover);
   border-radius: 50%;
 }
+/* ícone em svg inline: a cor vem do currentColor */
 .technologies-highlight-img {
   width: 25px;
+  height: 25px;
+  color: var(--icons-color);
 }
 .technologies-highlight-copy {
   display: flex;
@@ -91,16 +98,10 @@
   .technologies {
     padding: 5rem 2rem 1rem 2rem;
   }
-  .technologies-cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 /*==========desktop==========*/
 @media screen and (min-width: 1024px) {
   .technologies-copy {
     max-width: 600px;
-  }
-  .technologies-cards {
-    grid-template-columns: repeat(6, 1fr);
   }
 }
