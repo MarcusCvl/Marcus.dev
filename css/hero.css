@@ -153,7 +153,7 @@
 /*==========tablet==========*/
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url("../assets/bg-img2.webp");
+    background-image: url("../assets/bg-img3.webp");
     background-position: right -7rem top var(--header-height);
     background-size: contain;
     background-repeat: no-repeat;
@@ -217,7 +217,7 @@
         transparent 80%,
         var(--background-color) 100%
       ),
-      url("../assets/bg-img2.webp");
+      url("../assets/bg-img3.webp");
     background-position: left calc(50vw + 11rem - 75vh) top
       var(--header-height);
     background-size: 150vh 100vh;
